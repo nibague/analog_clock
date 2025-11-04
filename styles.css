@@ -44,7 +44,13 @@ body {
     left: 50%;
     transform-origin: 50% 100%;
     transform: translateX(-50%) rotate(0deg);
-    transition: transform 0.2s ease-in-out;
+}
+
+/* Add transitions only to hour and minute hands */
+.hand.hour,
+.hand.minute {
+    transition: transform 0.5s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+    will-change: transform;
 }
 
 .hand.hour {
